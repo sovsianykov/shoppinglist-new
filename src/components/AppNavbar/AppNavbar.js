@@ -24,8 +24,8 @@ class AppNavbar extends Component {
 
 
     return (
-        <div>
-            <Navbar color='dark' dark expand='sm' className='mb-lg-0' >
+        <div style={{position : "fixed", top : "0", width: "100%"}}>
+            <Navbar color='dark'  dark expand='sm' className='mb-lg-0' >
                  <Container>
                      <NavbarBrand href='/' >Shopping List</NavbarBrand>
                      <NavbarToggler onClick={this.toggle} />

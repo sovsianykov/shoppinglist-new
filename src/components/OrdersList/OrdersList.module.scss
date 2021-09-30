@@ -1,0 +1,29 @@
+.ordersList {
+  margin-top: 10px;
+  border: 1px solid #ababab;
+  border-radius: 7px;
+  padding-top: 20px;
+  width: 98%;
+  margin-right: 1%;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  .ordersListItem {
+    width: 95%;
+    padding: 20px 10px ;
+    min-height: 100px;
+    margin-top: 10px;
+
+    background: #e5e5e5;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #dfdfdf;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+
+    }
+  }
+}

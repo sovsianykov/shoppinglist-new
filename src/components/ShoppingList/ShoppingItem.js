@@ -23,7 +23,10 @@ const ShoppingItem = ({item, onChange, onClick}) => {
                 <option>+</option>
                 <option>1пачка</option>
                 <option>2пачки</option>
-                <option>3пачки</option>
+                <option>1дес</option>
+                <option>2дес</option>
+                <option>1литр</option>
+                <option>10шт</option>
                 <option>1кг</option>
                 <option>2кг</option>
                 <option>3кг</option>
