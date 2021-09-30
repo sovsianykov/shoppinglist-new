@@ -9,9 +9,7 @@ const ShoppingItem = ({item, onChange, onClick}) => {
     const onChangeHandler = useCallback((e) =>{
         onChange(e)
     },[ onChange])
-    const onClickHandler = useCallback((e) =>{
-        onClick(e)
-    },[onClick])
+
     return (
         <FormGroup className={styles.shoppingListItem} >
             <Label for={item.id}  className={styles.labelItem}>{item.name}</Label>
