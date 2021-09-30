@@ -8,12 +8,16 @@ import {Button} from "reactstrap";
 
 const ShoppingList = () => {
   const [shop, setShop] = useState({});
+  const [product, setProduct] = useState({})
   const [order, setOrder] = useState(['Вaш заказ :']);
 
   const changeHandler = (event) => {
     console.log(event.target.value);
     setShop({ ...shop, [event.target.name]: `${event.target.value}` });
+    setProduct({[event.target.name]: `${event.target.value}`})
   };
+    console.log(product)
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     let stringOrder = "";
@@ -25,7 +29,6 @@ const ShoppingList = () => {
     setOrder((order) => order + stringOrder);
     setShop([]);
   };
-  console.log(shop);
   console.log(order);
   const orderSubmitHandler = () =>{
      postOrder({ "name": order })
@@ -40,6 +43,7 @@ const ShoppingList = () => {
       <div className={styles.shoppingList}>
         {mockItems.map((item) => (
           <ShoppingItem
+             product={product}
             item={item}
             key={item.id}
             onClick={onSubmitHandler}
