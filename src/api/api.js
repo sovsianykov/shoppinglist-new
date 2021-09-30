@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const BASE_URL = "http://localhost:8000/api/items";
+export const BASE_URL = "/api/items";
 export const useFetch =  (url) => {
   const [response, setResponse] = useState({});
   const [isLoading, setIsLoading] = useState(true);

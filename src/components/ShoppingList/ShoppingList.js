@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { v4 as uuid } from "uuid";
 import ShoppingItem from "./ShoppingItem";
 import { mockItems } from "../../mock/mock";
 import { Container } from "reactstrap";
@@ -7,9 +6,9 @@ import styles from "./ShoppingList.module.scss";
 import {postOrder} from "../../api/postOrder";
 import {Button} from "reactstrap";
 
-const ShoppingList = ({ items }) => {
+const ShoppingList = () => {
   const [shop, setShop] = useState({});
-  const [order, setOrder] = useState([]);
+  const [order, setOrder] = useState(['Вaш заказ :']);
 
   const changeHandler = (event) => {
     console.log(event.target.value);
@@ -30,7 +29,12 @@ const ShoppingList = ({ items }) => {
   console.log(order);
   const orderSubmitHandler = () =>{
      postOrder({ "name": order })
+      setOrder('Заказ отправлен')
   }
+    const orderClearHandler = () =>{
+
+        setOrder('Новый заказ:')
+    }
   return (
     <Container>
       <div className={styles.shoppingList}>
@@ -44,10 +48,10 @@ const ShoppingList = ({ items }) => {
         ))}
       </div>
       <div className={styles.finalMessage}>
-        <h5>Ваш заказ:</h5>
         {order}
       </div>
      <Button onClick={orderSubmitHandler} className={styles.btn}>Отправить</Button>
+     <Button onClick={orderClearHandler} className={styles.btn}>Очистить</Button>
     </Container>
   );
 };

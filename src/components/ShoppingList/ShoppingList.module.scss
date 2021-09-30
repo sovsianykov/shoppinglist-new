@@ -10,7 +10,7 @@
     margin-top: 10px;
     .labelItem{
       width: 150px;
-      color: darkblue;
+      color: #44474b;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: .1rem;
@@ -22,8 +22,8 @@
       width: 180px;
       outline-color: transparent;
       &:focus {
-       background: bisque;
-        color: #171212;
+       background: #6C757D;
+        color: #ffffff;
 
       }
     }
@@ -35,7 +35,7 @@
   margin-top: 50vh;
   min-height: 100px;
   padding: 10px;
-  background: bisque;
+  background: #e5e5e5;
   font-size: 20px;
   width: 400px;
   border-radius: 5px;
@@ -43,4 +43,5 @@
 }
 .btn {
   margin-top: 5px;
+  margin-right: 10px;
 }
