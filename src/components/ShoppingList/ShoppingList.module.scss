@@ -1,5 +1,5 @@
 .shoppingList {
-  width: 450px;
+  width: 300px;
   height: 30px;
   padding: 5px;
   margin: 10px 5px ;
@@ -9,7 +9,7 @@
     justify-content: space-between;
     margin-top: 10px;
     .labelItem{
-      width: 150px;
+      width: 100px;
       color: #44474b;
       font-weight: 600;
       text-transform: uppercase;
@@ -19,7 +19,7 @@
       padding: 5px;
       font-weight: 600;
       margin-left: 20px;
-      width: 180px;
+      width: 100px;
       outline-color: transparent;
       &:focus {
        background: #6C757D;
@@ -37,7 +37,7 @@
   padding: 10px;
   background: #e5e5e5;
   font-size: 20px;
-  width: 400px;
+  width: 350px;
   border-radius: 5px;
   box-shadow: 0 0 3px #dfdfdf;
 }

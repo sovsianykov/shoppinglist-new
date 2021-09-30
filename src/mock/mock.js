@@ -6,6 +6,6 @@ export  const mockItems  = [
     { id: uuid(), name: "Мясо", amount: ""},
     { id: uuid(), name: "Яблоки", amount: ""},
     { id: uuid(), name: "Яйца", amount: ""},
-    { id: uuid(), name: "Масло подсолнечное",amount: ""},
+    { id: uuid(), name: "Масло",amount: ""},
     { id: uuid(), name: "капуста", amount: "" },
 ]
