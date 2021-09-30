@@ -9,7 +9,6 @@ import {
   NavLink,
   Container,
 } from "reactstrap";
-import {findAllByDisplayValue} from "@testing-library/react";
 
 class AppNavbar extends Component {
     state = {

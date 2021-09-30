@@ -1,0 +1,46 @@
+.shoppingList {
+  width: 450px;
+  height: 30px;
+  padding: 5px;
+  margin: 10px 5px ;
+  .shoppingListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    .labelItem{
+      width: 150px;
+      color: darkblue;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+    .inputItem {
+      padding: 5px;
+      font-weight: 600;
+      margin-left: 20px;
+      width: 180px;
+      outline-color: transparent;
+      &:focus {
+       background: bisque;
+        color: #171212;
+
+      }
+    }
+
+  }
+
+}
+.finalMessage {
+  margin-top: 50vh;
+  min-height: 100px;
+  padding: 10px;
+  background: bisque;
+  font-size: 20px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #dfdfdf;
+}
+.btn {
+  margin-top: 5px;
+}
