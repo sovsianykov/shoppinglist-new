@@ -1,38 +1,45 @@
-import React, {useCallback} from 'react';
-import {Button, FormGroup, Input, Label} from "reactstrap";
-import styles from "./ShoppingList.module.scss"
+import React, {memo, useMemo} from 'react';
+import { FormGroup, Input, Label} from "reactstrap";
+import styles from "./ShoppingList.module.scss";
+import cn from 'classnames';
 
 
 
-const ShoppingItem = ({item, onChange, onClick}) => {
+
+const ShoppingItem = ({item, onChange}) => {
     
-    const onChangeHandler = useCallback((e) =>{
-        onChange(e)
-    },[ onChange])
-
+    const classNames = useMemo(() =>  cn ({
+        [styles.shoppingListItem] :true, 
+        [styles.shoppingListItem_active] : !(item.amount === "")
+    })
+        
+    ,[item.amount])
     return (
-        <FormGroup className={styles.shoppingListItem} >
+        <FormGroup className={classNames} >
             <Label for={item.id}  className={styles.labelItem}>{item.name}</Label>
+
             <Input
-                onChange={onChangeHandler}
+                onChange={onChange}
                 className={styles.inputItem}
-                type="select"
+                type='select'
                 value={item.amount}
                 name={item.name}
                 id={item.id}>
-                <option>+</option>
-                <option>1пачка</option>
-                <option>2пачки</option>
-                <option>1дес</option>
-                <option>2дес</option>
-                <option>1литр</option>
-                <option>10шт</option>
-                <option>1кг</option>
-                <option>2кг</option>
-                <option>3кг</option>
-                <option>1шт</option>
-                <option>2шт</option>
-                <option>3шт</option>
+                <option >+</option>
+                <option>1 пачка</option>
+                <option>1 литр</option>
+                <option>2 пачки</option>
+                <option>1 дес</option>
+                <option>2 дес</option>
+                <option>1 литр</option>
+                <option>1 литр</option>
+                <option>10 шт</option>
+                <option>1 кг</option>
+                <option>2 кг</option>
+                <option>3 кг</option>
+                <option>1 шт</option>
+                <option>2 шт</option>
+                <option>3 шт</option>
                 <option>4</option>
                 <option>5</option>
                 <option>10</option>
@@ -42,9 +49,8 @@ const ShoppingItem = ({item, onChange, onClick}) => {
                 <option>500г</option>
                 <option>800</option>
             </Input>
-            <Button dark="true"  onClick={onClick}>Add</Button>
         </FormGroup>
     );
 };
 
-export default ShoppingItem;
+export default memo(ShoppingItem);
