@@ -1,0 +1,5 @@
+export const GET_ORDERS = "GET_ORDERS";
+export const POST_ORDER = "GET_ORDER";
+export const WRITE_CURRENT_PRODUCT = "WRITE_CURRENT_PRODUCT";
+export const GET_CURRENT_ORDER = "GET_CURRENT_ORDER";
+

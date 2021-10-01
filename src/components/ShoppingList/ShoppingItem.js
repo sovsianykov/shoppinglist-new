@@ -4,24 +4,24 @@ import styles from "./ShoppingList.module.scss"
 
 
 
+
 const ShoppingItem = ({item, onChange, onClick,product}) => {
-    
-    const onChangeHandler = useCallback((e) =>{
-        onChange(e)
-    },[ onChange])
-    const q = Object.keys(product)[0] === item.name ? Object.values(product)[0] : "";
+    // const onChangeHandler = useCallback((e) =>{
+    //     onChange(e)
+    // },[ onChange])
+    // const q = Object.keys(product)[0] === item.name ? Object.values(product)[0] : "";
     return (
         <FormGroup className={styles.shoppingListItem} >
             <Label for={item.id}  className={styles.labelItem}>{item.name}</Label>
 
             <Input
-                onChange={onChangeHandler}
+                onChange={onChange}
                 className={styles.inputItem}
                 type='select'
                 value={item.amount}
                 name={item.name}
                 id={item.id}>
-                <option >{q}</option>
+                <option ></option>
                 <option>1пачка</option>
                 <option>2пачки</option>
                 <option>1дес</option>

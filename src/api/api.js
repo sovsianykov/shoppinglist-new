@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {BASE_URL} from "../redux/actions";
 
-export const BASE_URL = "https://shoppinglist-new.herokuapp.com/api/items";
 export const useFetch =  () => {
   const [response, setResponse] = useState({});
   const [isLoading, setIsLoading] = useState(true);
