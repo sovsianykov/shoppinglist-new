@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useMemo} from 'react';
+import React, {memo, useMemo} from 'react';
 import { FormGroup, Input, Label} from "reactstrap";
 import styles from "./ShoppingList.module.scss";
 import cn from 'classnames';

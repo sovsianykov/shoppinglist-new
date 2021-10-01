@@ -1,9 +1,7 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback} from "react";
 import ShoppingItem from "./ShoppingItem";
-import { mockItems } from "../../mock/mock";
 import { Container } from "reactstrap";
 import styles from "./ShoppingList.module.scss";
-import {postOrder} from "../../api/postOrder";
 import {Button} from "reactstrap";
 import {useOrders} from "../../api/useOrders/useOrders";
 import {useDispatch, useSelector} from "react-redux";
@@ -14,10 +12,7 @@ const ShoppingList = () => {
     const dispatch = useDispatch()
     const { currentOrder,postedOrder } = useSelector(state => state.orderReducer)
 
-    const [shop, setShop] = useState({});
-  // const [product, setProduct] = useState({})
-  // const [order, setOrder] = useState(['Вaш заказ :']);
-  //
+
   const changeHandler = (event) => {
 
 
