@@ -11,7 +11,6 @@ const OrdersList = () => {
     if (error) {
         return <h2>error...</h2>
     }
-    console.log(response)
     return (
         <section className={styles.ordersList}>
             <h4>История заказов</h4>

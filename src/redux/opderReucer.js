@@ -1,11 +1,12 @@
 import {mockItems} from "../mock/mock";
-import {GET_CURRENT_ORDER, GET_ORDERS, POST_ORDER, WRITE_CURRENT_ORDER, WRITE_CURRENT_PRODUCT} from "./types";
+import {GET_CURRENT_ORDER, GET_ORDERS, POST_ORDER, WRITE_CURRENT_PRODUCT} from "./types";
+import {updateOrder} from "./utills";
 
 
 const initialState = {
     ordersList : [],
     currentOrder : mockItems,
-    currentProduct : { name : "", amount: ""},
+    postedOrder : '',
     deletedOrder : { name : "", amount: ""},
 }
 const orderReducer = ( state = initialState, action) =>{
@@ -28,9 +29,7 @@ const orderReducer = ( state = initialState, action) =>{
           case WRITE_CURRENT_PRODUCT :
               return  {
                   ...state,
-                  currentOrder  :  state.currentOrder.forEach((el) => (
-                  Object.keys(el)[0] === Object.keys(action.payload)[0] ? action.payload : el;)
-                  )
+                  currentOrder  :  updateOrder(state.currentOrder,action.payload)
               }
           default : return state;
 

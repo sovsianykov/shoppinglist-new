@@ -2,6 +2,10 @@
   width: 300px;
   height: 30px;
   margin: 70px 0 0 ;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
   .shoppingListItem {
     display: flex;
     align-items: center;
@@ -9,7 +13,7 @@
     margin-top: 10px;
     .labelItem{
       width: 100px;
-      color: #44474b;
+      color: rgba(73, 73, 77, 0.82);
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: .1rem;
@@ -20,13 +24,29 @@
       margin-left: 20px;
       width: 100px;
       outline-color: transparent;
+      box-shadow: none;
+      border-right: none;
+      border-left: none;
+      border-top: none;
       &:focus {
-       background: #6C757D;
-        color: #ffffff;
+        color: #041770;
+        outline-color: transparent;
+        box-shadow: none;
+
 
       }
     }
+    &_active {
+      justify-self: start;
+      z-index: 2;
+      position: relative;
+      .labelItem {
+        color: rgb(73, 73, 77);
+        font-weight: 700;
+        font-size: 18px;
 
+      }
+    }
   }
 
 }
